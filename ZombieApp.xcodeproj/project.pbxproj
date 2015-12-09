@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF1A110D1C181BA500AC5148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A110C1C181BA500AC5148 /* AppDelegate.swift */; };
+		CF1A110F1C181BA500AC5148 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A110E1C181BA500AC5148 /* ViewController.swift */; };
+		CF1A11121C181BA500AC5148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1A11101C181BA500AC5148 /* Main.storyboard */; };
+		CF1A11141C181BA500AC5148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1A11131C181BA500AC5148 /* Assets.xcassets */; };
+		CF1A11171C181BA500AC5148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1A11151C181BA500AC5148 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CF1A11091C181BA500AC5148 /* ZombieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1A110C1C181BA500AC5148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF1A110E1C181BA500AC5148 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF1A11111C181BA500AC5148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF1A11131C181BA500AC5148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF1A11161C181BA500AC5148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF1A11181C181BA500AC5148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF1A11061C181BA500AC5148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF1A11001C181BA500AC5148 = {
+			isa = PBXGroup;
+			children = (
+				CF1A110B1C181BA500AC5148 /* ZombieApp */,
+				CF1A110A1C181BA500AC5148 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF1A110A1C181BA500AC5148 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A11091C181BA500AC5148 /* ZombieApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1A110B1C181BA500AC5148 /* ZombieApp */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A110C1C181BA500AC5148 /* AppDelegate.swift */,
+				CF1A110E1C181BA500AC5148 /* ViewController.swift */,
+				CF1A11101C181BA500AC5148 /* Main.storyboard */,
+				CF1A11131C181BA500AC5148 /* Assets.xcassets */,
+				CF1A11151C181BA500AC5148 /* LaunchScreen.storyboard */,
+				CF1A11181C181BA500AC5148 /* Info.plist */,
+			);
+			path = ZombieApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF1A11081C181BA500AC5148 /* ZombieApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1A111B1C181BA500AC5148 /* Build configuration list for PBXNativeTarget "ZombieApp" */;
+			buildPhases = (
+				CF1A11051C181BA500AC5148 /* Sources */,
+				CF1A11061C181BA500AC5148 /* Frameworks */,
+				CF1A11071C181BA500AC5148 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZombieApp;
+			productName = ZombieApp;
+			productReference = CF1A11091C181BA500AC5148 /* ZombieApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF1A11011C181BA500AC5148 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "William JEHANNE";
+				TargetAttributes = {
+					CF1A11081C181BA500AC5148 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = CF1A11041C181BA500AC5148 /* Build configuration list for PBXProject "ZombieApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1A11001C181BA500AC5148;
+			productRefGroup = CF1A110A1C181BA500AC5148 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF1A11081C181BA500AC5148 /* ZombieApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF1A11071C181BA500AC5148 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1A11171C181BA500AC5148 /* LaunchScreen.storyboard in Resources */,
+				CF1A11141C181BA500AC5148 /* Assets.xcassets in Resources */,
+				CF1A11121C181BA500AC5148 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF1A11051C181BA500AC5148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1A110F1C181BA500AC5148 /* ViewController.swift in Sources */,
+				CF1A110D1C181BA500AC5148 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CF1A11101C181BA500AC5148 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF1A11111C181BA500AC5148 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF1A11151C181BA500AC5148 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF1A11161C181BA500AC5148 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF1A11191C181BA500AC5148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF1A111A1C181BA500AC5148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF1A111C1C181BA500AC5148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZombieApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZombieApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF1A111D1C181BA500AC5148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZombieApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZombieApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF1A11041C181BA500AC5148 /* Build configuration list for PBXProject "ZombieApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1A11191C181BA500AC5148 /* Debug */,
+				CF1A111A1C181BA500AC5148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF1A111B1C181BA500AC5148 /* Build configuration list for PBXNativeTarget "ZombieApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1A111C1C181BA500AC5148 /* Debug */,
+				CF1A111D1C181BA500AC5148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF1A11011C181BA500AC5148 /* Project object */;
+}
