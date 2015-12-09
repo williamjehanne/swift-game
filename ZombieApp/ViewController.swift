@@ -57,8 +57,9 @@ class ViewController: UIViewController {
     }
     
     func createZombie() {
-        var z:Zombie = Zombie(x:11, y:0, name:"Zombie")
+        let z:Zombie = Zombie(x:11, y:2, name:"Zombie")
         z.drawCharacter(boardView, game: self.game)
+        self.zombies.append(z)
     }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
@@ -70,6 +71,27 @@ class ViewController: UIViewController {
             if (self.currentSpawnTime == self.game?.rateSpawn) {
                 self.currentSpawnTime = 0
                 createZombie()
+            }
+            
+            for z in self.zombies {
+            
+                let lower : UInt32 = 0
+                let upper : UInt32 = 4
+                let randomNumber = arc4random_uniform(upper - lower) + lower
+                
+                switch randomNumber {
+                    case 0:
+                        z.goRight(self.game)
+                    case 1:
+                        z.goLeft(self.game)
+                    case 2:
+                        z.goDown(self.game)
+                    case 3:
+                        z.goUp(self.game)
+                    default:
+                        break
+                }
+                
             }
             
             myLabel.text = String(self.player!.score)
