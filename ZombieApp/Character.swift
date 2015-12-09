@@ -24,6 +24,9 @@ class Character {
         let positionX = self.x*game.widthCell!
         let positionY = self.y*game.heightCell!
         
+        print("positionX\(positionX)")
+        print("positionY\(positionY)")
+        
         let rectCharacter:CGRect = CGRect(x:positionX, y:positionY, width:game.widthCell!, height:game.heightCell!)
         
         let m:UIView = UIView(frame: rectCharacter)

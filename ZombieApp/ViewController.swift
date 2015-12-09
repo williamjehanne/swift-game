@@ -23,12 +23,44 @@ class ViewController: UIViewController {
         print("widthScreen \(widthScreen)")
         print("heightScreen \(heightScreen)")
 
-        let game : Game     = Game(sizeX:20, sizeY:16, levelHealthStart:10, rateSpawn:5)
-        let player : Player = Player(health: game.levelHealthStart, x:6, y:0, name:"William")
+        let game : Game     = Game(sizeX:12, sizeY:16, levelHealthStart:10, rateSpawn:5)
+        let player : Player = Player(health: game.levelHealthStart, x:11, y:0, name:"William")
         
         game.setCalculateSizeCell(widthScreen, height: heightScreen)
-       
         player.drawCharacter(boardView, game: game)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipeDown)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeUp.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(swipeUp)
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                print("Swiped right")
+            case UISwipeGestureRecognizerDirection.Down:
+                print("Swiped down")
+            case UISwipeGestureRecognizerDirection.Left:
+                print("Swiped left")
+            case UISwipeGestureRecognizerDirection.Up:
+                print("Swiped up")
+            default:
+                break
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
