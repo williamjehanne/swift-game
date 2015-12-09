@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var player:Player!
     var game:Game!
     var currentSpawnTime:Int? = 0
+    var zombies:[Zombie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
         
         game.setCalculateSizeCell(widthScreen, height: heightScreen)
         player.drawCharacter(boardView, game: game)
+        
         myLabel.text = String(0)
         listenerGesture()
     }
@@ -54,6 +56,11 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(swipeUp)
     }
     
+    func createZombie() {
+        var z:Zombie = Zombie(x:11, y:0, name:"Zombie")
+        z.drawCharacter(boardView, game: self.game)
+    }
+    
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
         
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
@@ -62,9 +69,8 @@ class ViewController: UIViewController {
             
             if (self.currentSpawnTime == self.game?.rateSpawn) {
                 self.currentSpawnTime = 0
+                createZombie()
             }
-            
-            print("self.currentSpawnTime \(self.currentSpawnTime)")
             
             myLabel.text = String(self.player!.score)
             

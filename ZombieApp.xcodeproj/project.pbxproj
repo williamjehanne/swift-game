@@ -16,6 +16,7 @@
 		CF1A11211C181CB400AC5148 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11201C181CB400AC5148 /* Character.swift */; };
 		CF1A11231C181FBE00AC5148 /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11221C181FBE00AC5148 /* Zombie.swift */; };
 		CF1A11251C18231400AC5148 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11241C18231400AC5148 /* Game.swift */; };
+		CF1A11271C18778900AC5148 /* YoloColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A11261C18778900AC5148 /* YoloColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CF1A11201C181CB400AC5148 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		CF1A11221C181FBE00AC5148 /* Zombie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
 		CF1A11241C18231400AC5148 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CF1A11261C18778900AC5148 /* YoloColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoloColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				CF1A11201C181CB400AC5148 /* Character.swift */,
 				CF1A11221C181FBE00AC5148 /* Zombie.swift */,
 				CF1A11241C18231400AC5148 /* Game.swift */,
+				CF1A11261C18778900AC5148 /* YoloColor.swift */,
 			);
 			path = ZombieApp;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				CF1A110F1C181BA500AC5148 /* ViewController.swift in Sources */,
 				CF1A111F1C181BDE00AC5148 /* Player.swift in Sources */,
 				CF1A110D1C181BA500AC5148 /* AppDelegate.swift in Sources */,
+				CF1A11271C18778900AC5148 /* YoloColor.swift in Sources */,
 				CF1A11211C181CB400AC5148 /* Character.swift in Sources */,
 				CF1A11231C181FBE00AC5148 /* Zombie.swift in Sources */,
 				CF1A11251C18231400AC5148 /* Game.swift in Sources */,
