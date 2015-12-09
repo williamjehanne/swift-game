@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var boardView: UIView!
+    @IBOutlet weak var myLabel: UILabel!
+    
+    
     var player:Player!
     var game:Game!
     
@@ -30,7 +33,7 @@ class ViewController: UIViewController {
         
         game.setCalculateSizeCell(widthScreen, height: heightScreen)
         player.drawCharacter(boardView, game: game)
-    
+        myLabel.text = String(0)
         listenerGesture()
     }
     
@@ -53,6 +56,9 @@ class ViewController: UIViewController {
     }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        self.player?.score! += 1
+        myLabel.text = String(self.player!.score)
+        
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
             case UISwipeGestureRecognizerDirection.Right:
