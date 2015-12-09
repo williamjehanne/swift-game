@@ -37,18 +37,42 @@ class Character {
     }
     
     func goDown(game: Game) {
-        self.subview.frame.origin.y += CGFloat(game.heightCell!)
+        if (self.y == (game.sizeY-1)){
+            self.subview.frame.origin.y = 0
+            self.y = 0
+        }else{
+            self.subview.frame.origin.y += CGFloat(game.heightCell!)
+            self.y! += 1
+        }
     }
     
     func goUp(game: Game) {
-        self.subview.frame.origin.y -= CGFloat(game.heightCell!)
+        if (self.y == 0){
+            self.subview.frame.origin.y = CGFloat((game.sizeY! - 1) * game.heightCell!)
+            self.y = game.sizeY-1
+        }else{
+            self.subview.frame.origin.y -= CGFloat(game.heightCell!)
+            self.y! -= 1
+        }
     }
     
     func goRight(game: Game) {
-        self.subview.frame.origin.x += CGFloat(game.widthCell!)
-    }
+        if (self.x == (game.sizeX-1)) {
+            self.subview.frame.origin.x = 0
+            self.x = 0
+        } else {
+            self.subview.frame.origin.x += CGFloat(game.widthCell!)
+            self.x! += 1
+        }
+     }
     
     func goLeft(game: Game) {
-        self.subview.frame.origin.x -= CGFloat(game.widthCell!)
+        if (self.x == 0) {
+            self.subview.frame.origin.x = CGFloat(game.widthCell!*(game.sizeX!-1))
+            self.x! = game.sizeX-1
+        } else {
+            self.subview.frame.origin.x -= CGFloat(game.widthCell!)
+            self.x! -= 1
+        }
     }
 }
