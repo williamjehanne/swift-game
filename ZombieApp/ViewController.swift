@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lifeLabel: UILabel!
     @IBOutlet weak var boardView: UIView!
     @IBOutlet weak var myLabel: UILabel!
     var player:Player!
     var game:Game!
     var currentSpawnTime:Int? = 0
     var zombies:[Zombie] = []
+    var index:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +26,9 @@ class ViewController: UIViewController {
         let bounds = boardView.frame
         let heightScreen    = Int(bounds.height)
         let widthScreen     = Int(bounds.width)
-        
-        print("widthScreen \(widthScreen)")
-        print("heightScreen \(heightScreen)")
 
-        self.game = Game(sizeX:12, sizeY:16, levelHealthStart:10, rateSpawn:4)
+        self.game = Game(sizeX:12, sizeY:16, levelHealthStart:10, rateSpawn:5)
+        self.lifeLabel.text = String(self.game.levelHealthStart)
         self.player = Player(health: game.levelHealthStart, x:11, y:0, name:"William")
         
         game.setCalculateSizeCell(widthScreen, height: heightScreen)
@@ -68,31 +68,14 @@ class ViewController: UIViewController {
             self.player!.score! += 1
             self.currentSpawnTime? += 1
             
+            self.player?.subview.backgroundColor = UIColor(hexString: self.player.color)
+            
             if (self.currentSpawnTime == self.game?.rateSpawn) {
                 self.currentSpawnTime = 0
                 createZombie()
             }
             
-            for z in self.zombies {
-            
-                let lower : UInt32 = 0
-                let upper : UInt32 = 4
-                let randomNumber = arc4random_uniform(upper - lower) + lower
-                
-                switch randomNumber {
-                    case 0:
-                        z.goRight(self.game)
-                    case 1:
-                        z.goLeft(self.game)
-                    case 2:
-                        z.goDown(self.game)
-                    case 3:
-                        z.goUp(self.game)
-                    default:
-                        break
-                }
-                
-            }
+            index = 0
             
             myLabel.text = String(self.player!.score)
             
@@ -107,6 +90,42 @@ class ViewController: UIViewController {
                 player.goUp(self.game)
             default:
                 break
+            }
+            
+            for z in self.zombies {
+                let lower : UInt32 = 0
+                let upper : UInt32 = 4
+                let randomNumber = arc4random_uniform(upper - lower) + lower
+                
+                if(z.x==self.player?.x && z.y == self.player?.y && z.isActive == true) {
+                    self.player?.health! -= 1
+                    self.lifeLabel.text = String(self.player.health)
+                    z.subview.removeFromSuperview()
+                    z.isActive = false
+                    self.player?.subview.backgroundColor = UIColor.redColor()
+                }
+                
+                switch randomNumber {
+                case 0:
+                    z.goRight(self.game)
+                case 1:
+                    z.goLeft(self.game)
+                case 2:
+                    z.goDown(self.game)
+                case 3:
+                    z.goUp(self.game)
+                default:
+                    break
+                }
+                
+                if(z.x==self.player?.x && z.y == self.player?.y && z.isActive == true) {
+                    self.player?.health! -= 1
+                    self.lifeLabel.text = String(self.player.health)
+                    z.subview.removeFromSuperview()
+                    z.isActive = false
+                    self.player?.subview.backgroundColor = UIColor.redColor()
+                }
+                index += 1;
             }
         }
     }

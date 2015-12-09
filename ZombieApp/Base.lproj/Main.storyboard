@@ -25,6 +25,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAV-b0-DMO" userLabel="lifeLabel">
+                                <rect key="frame" x="258" y="67" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bnm-ZA-Rr1">
                                 <rect key="frame" x="92" y="67" width="136" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,6 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="boardView" destination="jeF-8q-Eb4" id="pBg-97-UE5"/>
+                        <outlet property="lifeLabel" destination="hAV-b0-DMO" id="4Ie-3l-nnM"/>
                         <outlet property="myLabel" destination="Bnm-ZA-Rr1" id="Apg-eQ-ydV"/>
                     </connections>
                 </viewController>
