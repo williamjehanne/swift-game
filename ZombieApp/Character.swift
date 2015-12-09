@@ -13,6 +13,7 @@ class Character {
     var x: Int!
     var y: Int!
     var color:String!
+    var subview:UIView!
     
     init(x:Int, y:Int, color:String) {
         self.color = color
@@ -29,9 +30,25 @@ class Character {
         
         let rectCharacter:CGRect = CGRect(x:positionX, y:positionY, width:game.widthCell!, height:game.heightCell!)
         
-        let m:UIView = UIView(frame: rectCharacter)
-        m.backgroundColor = UIColor.redColor()
+        self.subview = UIView(frame: rectCharacter)
+        self.subview.backgroundColor = UIColor.redColor()
         
-        view.addSubview(m)
+        view.addSubview(self.subview)
+    }
+    
+    func goDown(game: Game) {
+        self.subview.frame.origin.y += CGFloat(game.heightCell!)
+    }
+    
+    func goUp(game: Game) {
+        self.subview.frame.origin.y -= CGFloat(game.heightCell!)
+    }
+    
+    func goRight(game: Game) {
+        self.subview.frame.origin.x += CGFloat(game.widthCell!)
+    }
+    
+    func goLeft(game: Game) {
+        self.subview.frame.origin.x -= CGFloat(game.widthCell!)
     }
 }

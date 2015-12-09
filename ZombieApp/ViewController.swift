@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var boardView: UIView!
+    var player:Player!
+    var game:Game!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +25,16 @@ class ViewController: UIViewController {
         print("widthScreen \(widthScreen)")
         print("heightScreen \(heightScreen)")
 
-        let game : Game     = Game(sizeX:12, sizeY:16, levelHealthStart:10, rateSpawn:5)
-        let player : Player = Player(health: game.levelHealthStart, x:11, y:0, name:"William")
+        self.game = Game(sizeX:12, sizeY:16, levelHealthStart:10, rateSpawn:5)
+        self.player = Player(health: game.levelHealthStart, x:11, y:0, name:"William")
         
         game.setCalculateSizeCell(widthScreen, height: heightScreen)
         player.drawCharacter(boardView, game: game)
-        
+    
+        listenerGesture()
+    }
+    
+    func listenerGesture() {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
@@ -50,13 +56,13 @@ class ViewController: UIViewController {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
             case UISwipeGestureRecognizerDirection.Right:
-                print("Swiped right")
+                player.goRight(self.game)
             case UISwipeGestureRecognizerDirection.Down:
-                print("Swiped down")
+                player.goDown(self.game)
             case UISwipeGestureRecognizerDirection.Left:
-                print("Swiped left")
+                player.goLeft(self.game)
             case UISwipeGestureRecognizerDirection.Up:
-                print("Swiped up")
+                player.goUp(self.game)
             default:
                 break
             }
